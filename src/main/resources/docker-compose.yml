@@ -1,0 +1,9 @@
+version: '2.2'
+services:
+  demo:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: jackyfangofteamwang/app.jar:1.0.0
+    ports:
+      - 8083

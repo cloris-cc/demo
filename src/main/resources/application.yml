@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo
+
+server:
+  port: 8083
+
+logging:
+  file: /tmp/${spring.application.name}.log
+  # 日志文件超过 10MB 后，自动分片
+  file.max-size: 10MB
+  # 日志文件最多存放 10 天
+  file.max-history: 10
+  level:
+    root: info # DAO 层可以为 DEBUG 级别
