@@ -66,6 +66,16 @@
     </dependencyManagement>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/docker</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/Dockerfile</include>
+                </includes>
+                <targetPath>${project.build.directory}</targetPath>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
